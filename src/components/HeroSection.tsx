@@ -1,4 +1,3 @@
-
 import { ArrowRight, Recycle, Truck, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -23,16 +22,10 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-clinzed-green hover:bg-clinzed-darkGreen text-black px-8 py-4 text-lg font-semibold"
+                onClick={() => window.open('https://wa.me/260773813759', '_blank')}
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-clinzed-green text-clinzed-green hover:bg-clinzed-green hover:text-black px-8 py-4 text-lg"
-              >
-                Learn More
               </Button>
             </div>
 
