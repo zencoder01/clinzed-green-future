@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: '#' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/18oHxHnmgU' },
     { icon: Twitter, href: '#' },
     { icon: Linkedin, href: '#' },
     { icon: Instagram, href: 'https://instagram.com/clinzed_ltd' }
