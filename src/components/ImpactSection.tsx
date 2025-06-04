@@ -1,5 +1,5 @@
 
-import { Leaf, Droplets, Wind, Recycle2 } from 'lucide-react';
+import { Leaf, Droplets, Wind, Recycle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ImpactSection = () => {
@@ -26,7 +26,7 @@ const ImpactSection = () => {
       description: 'Waste redirected from landfills to recycling and processing'
     },
     {
-      icon: Recycle2,
+      icon: Recycle,
       number: '10M',
       unit: 'lbs',
       label: 'Materials Recycled',
