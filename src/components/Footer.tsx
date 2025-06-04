@@ -30,7 +30,7 @@ const Footer = () => {
     { icon: Facebook, href: '#' },
     { icon: Twitter, href: '#' },
     { icon: Linkedin, href: '#' },
-    { icon: Instagram, href: '#' }
+    { icon: Instagram, href: 'https://instagram.com/clinzed_ltd' }
   ];
 
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-clinzed-lightGreen" />
-                <span>(555) 123-CLEAN</span>
+                <span>+260773813759</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-clinzed-lightGreen" />
@@ -62,6 +62,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-clinzed-lightGreen" />
                 <span>Serving Communities Nationwide</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Instagram className="h-5 w-5 text-clinzed-lightGreen" />
+                <span>@clinzed_ltd</span>
               </div>
             </div>
           </div>

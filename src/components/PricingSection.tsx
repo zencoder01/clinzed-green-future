@@ -53,7 +53,7 @@ const PricingSection = () => {
     }
   ];
 
-  const whatsappNumber = '+2609773813759';
+  const whatsappNumber = '+260773813759';
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}`;
 
   return (
