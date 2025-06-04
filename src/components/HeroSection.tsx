@@ -1,3 +1,4 @@
+
 import { ArrowRight, Recycle, Truck, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -22,7 +23,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-clinzed-green hover:bg-clinzed-darkGreen text-black px-8 py-4 text-lg font-semibold"
-                onClick={() => window.open('https://wa.me/260773813759', '_blank')}
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
