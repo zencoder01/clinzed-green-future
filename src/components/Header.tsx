@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <header className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-sm border-b border-gray-800 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -23,7 +23,7 @@ const Header = () => {
             <div className="bg-clinzed-green p-2 rounded-lg">
               <Leaf className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-clinzed-darkGreen">CLINZED</span>
+            <span className="text-2xl font-bold text-clinzed-green">CLINZED</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -32,7 +32,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-clinzed-green transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-clinzed-green transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -50,7 +50,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-clinzed-green"
+              className="text-gray-300 hover:text-clinzed-green"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -59,13 +59,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
+          <div className="md:hidden border-t border-gray-800 py-4">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-clinzed-green transition-colors duration-200 font-medium"
+                  className="text-gray-300 hover:text-clinzed-green transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
