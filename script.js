@@ -71,14 +71,22 @@ function toggleFAQ(button) {
     icon.textContent = answer.classList.contains('active') ? '-' : '+';
 }
 
+// WhatsApp Contact Function
+function openWhatsApp() {
+    const phoneNumber = '260773813759';
+    const message = 'Hello! I\'m interested in your waste management services. Could you please provide me with more information?';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
 // Contact Form Handler
 function handleSubmit(event) {
     event.preventDefault();
     
     const formData = new FormData(event.target);
-    const name = formData.get('name') || event.target.querySelector('input[type="text"]').value;
-    const email = formData.get('email') || event.target.querySelector('input[type="email"]').value;
-    const message = formData.get('message') || event.target.querySelector('textarea').value;
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
     
     // Simple form validation
     if (!name || !email || !message) {
@@ -86,8 +94,13 @@ function handleSubmit(event) {
         return;
     }
     
-    // Simulate form submission
-    alert(`Thank you, ${name}! Your message has been sent. We'll get back to you at ${email} soon.`);
+    // Simulate form submission and redirect to WhatsApp
+    const whatsappMessage = `Hello! My name is ${name}. Email: ${email}. Message: ${message}`;
+    const phoneNumber = '260773813759';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    alert(`Thank you, ${name}! Redirecting you to WhatsApp to complete your message.`);
+    window.open(whatsappUrl, '_blank');
     
     // Reset form
     event.target.reset();
@@ -97,9 +110,9 @@ function handleSubmit(event) {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(0, 0, 0, 0.95)';
+        header.style.background = 'rgba(0, 0, 0, 0.98)';
     } else {
-        header.style.background = 'rgba(0, 0, 0, 0.9)';
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
     }
 });
 
@@ -130,11 +143,17 @@ window.addEventListener('scroll', () => {
 // Pricing Plan Selection
 document.querySelectorAll('.pricing-card .btn').forEach(button => {
     button.addEventListener('click', (e) => {
-        const card = e.target.closest('.pricing-card');
-        const planName = card.querySelector('h3').textContent;
-        const price = card.querySelector('.price').textContent;
-        
-        alert(`You've selected the ${planName} plan at ${price}. Contact us to get started!`);
+        if (e.target.textContent.includes('Get Started') || e.target.textContent.includes('Book Now')) {
+            const card = e.target.closest('.pricing-card');
+            const planName = card.querySelector('h3').textContent;
+            const price = card.querySelector('.price').textContent;
+            
+            const message = `Hello! I'm interested in the ${planName} at ${price}. Could you please provide me with more information and help me get started?`;
+            const phoneNumber = '260773813759';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
     });
 });
 
@@ -155,7 +174,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.pricing-card, .feature, .stat, .faq-item');
+    const animateElements = document.querySelectorAll('.pricing-card, .service-card, .stat, .faq-item, .value-item');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
@@ -165,5 +184,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Add click handlers for social links
+document.addEventListener('DOMContentLoaded', () => {
+    // Facebook link
+    const facebookLinks = document.querySelectorAll('a[href*="facebook"]');
+    facebookLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://www.facebook.com/share/18oHxHnmgU', '_blank');
+        });
+    });
+
+    // Instagram link
+    const instagramLinks = document.querySelectorAll('a[href*="instagram"]');
+    instagramLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://instagram.com/clinzed_ltd', '_blank');
+        });
+    });
+
+    // WhatsApp links
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+    whatsappLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://wa.me/260773813759', '_blank');
+        });
+    });
+});
+
 // Console log for debugging
 console.log('CLINZED website loaded successfully!');
+
+// Add smooth reveal animation on page load
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    // Set initial body opacity for smooth page load
+    document.body.style.opacity = '1';
+    document.body.style.transition = 'opacity 0.3s ease';
+    
+    // Initialize any additional features here
+    console.log('All CLINZED features initialized!');
+});
