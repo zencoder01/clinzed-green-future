@@ -1,3 +1,4 @@
+
 import { Leaf, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -100,7 +101,10 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200">
+                  <a 
+                    href={link === 'FAQ' ? '#faq' : '#'} 
+                    className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200"
+                  >
                     {link}
                   </a>
                 </li>
