@@ -43,13 +43,13 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-clinzed-darkGreen mb-4">
-            Comprehensive Waste Management Services
+          <h2 className="text-4xl font-bold text-clinzed-green mb-4">
+            Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             From residential pickup to industrial solutions, we provide innovative and sustainable 
             waste management services tailored to your specific needs.
           </p>
@@ -57,17 +57,17 @@ const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gray-800/80 border-gray-700 shadow-lg">
               <CardHeader className="text-center pb-4">
-                <div className="bg-clinzed-green/10 group-hover:bg-clinzed-green group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300">
-                  <service.icon className="h-8 w-8 text-clinzed-green group-hover:text-white transition-colors duration-300" />
+                <div className="bg-clinzed-green/20 group-hover:bg-clinzed-green group-hover:text-black w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-clinzed-green group-hover:text-black transition-colors duration-300" />
                 </div>
-                <CardTitle className="text-xl text-clinzed-darkGreen group-hover:text-clinzed-green transition-colors duration-300">
+                <CardTitle className="text-xl text-white group-hover:text-clinzed-green transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-gray-600 mb-4 leading-relaxed">
+                <CardDescription className="text-gray-300 mb-4 leading-relaxed">
                   {service.description}
                 </CardDescription>
                 <ul className="space-y-2">
