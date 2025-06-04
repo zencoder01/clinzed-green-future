@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-clinzed-lightGreen" />
-                <span>Serving Communities Nationwide</span>
+                <span>Lusaka, Zambia</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Instagram className="h-5 w-5 text-clinzed-lightGreen" />

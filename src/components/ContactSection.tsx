@@ -18,8 +18,8 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: 'Service Areas',
-      content: 'Multiple Locations',
-      subContent: 'Serving communities nationwide'
+      content: 'Lusaka, Zambia',
+      subContent: 'Professional waste management services'
     },
     {
       icon: Clock,
