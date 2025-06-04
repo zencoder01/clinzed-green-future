@@ -1,4 +1,3 @@
-
 import { Leaf, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -19,7 +18,6 @@ const Footer = () => {
     ],
     support: [
       'Contact Us',
-      'Customer Portal',
       'Service Areas',
       'Emergency Services',
       'FAQ'
