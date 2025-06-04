@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -19,10 +19,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-clinzed-green p-2 rounded-lg">
-              <Leaf className="h-6 w-6 text-white" />
-            </div>
+          <div className="flex items-center">
             <span className="text-2xl font-bold text-clinzed-green">CLINZED</span>
           </div>
 
