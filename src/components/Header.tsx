@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,9 @@ const Header = () => {
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const whatsappNumber = '+260773813759';
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}`;
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-sm border-b border-gray-800 z-50">
@@ -37,7 +41,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-clinzed-green hover:bg-clinzed-darkGreen text-white">
+            <Button 
+              className="bg-clinzed-green hover:bg-clinzed-darkGreen text-white"
+              onClick={() => window.open(whatsappUrl, '_blank')}
+            >
               Get Quote
             </Button>
           </div>
@@ -67,7 +74,13 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="bg-clinzed-green hover:bg-clinzed-darkGreen text-white w-full mt-4">
+              <Button 
+                className="bg-clinzed-green hover:bg-clinzed-darkGreen text-white w-full mt-4"
+                onClick={() => {
+                  window.open(whatsappUrl, '_blank');
+                  setIsMenuOpen(false);
+                }}
+              >
                 Get Quote
               </Button>
             </div>

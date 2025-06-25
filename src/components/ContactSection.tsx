@@ -12,7 +12,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'info@clinzed.com',
+      content: 'jethrine@clinzed.site',
       subContent: 'Quick response guaranteed'
     },
     {
