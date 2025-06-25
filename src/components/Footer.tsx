@@ -54,7 +54,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-clinzed-lightGreen" />
-                <span>info@clinzed.com</span>
+                <span>jethrine@clinzed.site</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-clinzed-lightGreen" />
