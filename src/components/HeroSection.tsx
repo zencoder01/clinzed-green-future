@@ -10,8 +10,9 @@ const HeroSection = () => {
           {/* Left Column - Text Content */}
           <div className="animate-fade-in">
             <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Management
-              <span className="block text-clinzed-green">Solutions</span>
+              Waste
+              <span className="block text-clinzed-green">Management</span>
+              <span className="block text-white">Solutions</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -69,15 +70,15 @@ const HeroSection = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80"
-                  alt="Green forest representing environmental sustainability"
+                  src="/lovable-uploads/ed49ad59-0ce2-422f-aa39-d1717304e2c7.png"
+                  alt="CLINZED team member collecting waste in the community"
                   className="w-full h-96 object-cover rounded-xl"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-clinzed-green p-6 rounded-xl shadow-lg">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-black">100%</div>
-                  <div className="text-sm text-black">Eco-Friendly</div>
+                  <div className="text-sm text-black">Community Focused</div>
                 </div>
               </div>
             </div>

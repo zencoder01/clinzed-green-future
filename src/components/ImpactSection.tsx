@@ -69,6 +69,34 @@ const ImpactSection = () => {
           ))}
         </div>
 
+        {/* Real Impact Images */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/85d67ebe-a5ae-4a15-b824-d32826931e0e.png"
+              alt="CLINZED team members collaborating on waste management"
+              className="w-full h-64 object-cover rounded-xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-bold text-clinzed-green">Community Collaboration</h3>
+              <p className="text-sm">Working together for cleaner environments</p>
+            </div>
+          </div>
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/74be9ffc-3e87-45c6-bcaa-fc8c00240931.png"
+              alt="Local community participating in waste management initiatives"
+              className="w-full h-64 object-cover rounded-xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-bold text-clinzed-green">Community Engagement</h3>
+              <p className="text-sm">Empowering local participation</p>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 max-w-4xl mx-auto">
