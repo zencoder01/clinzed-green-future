@@ -15,14 +15,20 @@ const Header = () => {
   ];
 
   const whatsappNumber = '+260773813759';
-  const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}`;
+  const quoteMessage = 'Hi CLINZED! I would like to get a quote for your waste management services. Please provide me with more details.';
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(quoteMessage)}`;
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-sm border-b border-gray-800 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/be30f79d-4ac3-43db-bf2a-dace7df47e07.png" 
+              alt="CLINZED Logo" 
+              className="h-10 w-auto"
+            />
             <span className="text-2xl font-bold text-clinzed-green">CLINZED</span>
           </div>
 
