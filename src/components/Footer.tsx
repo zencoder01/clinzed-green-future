@@ -1,27 +1,24 @@
 
 import { Leaf, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = {
     services: [
-      'Residential Collection',
-      'Commercial Waste',
-      'Industrial Solutions',
-      'Recycling Programs',
-      'Emergency Cleanup'
+      { name: 'Residential Collection', href: '/#pricing' },
+      { name: 'Commercial Waste', href: '/#pricing' },
+      { name: 'Recycling Programs', href: '/#pricing' }
     ],
     company: [
-      'About Us',
-      'Our Mission',
-      'Sustainability',
-      'Careers',
-      'News & Updates'
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Mission', href: '/mission' },
+      { name: 'Sustainability', href: '/sustainability' },
+      { name: 'News & Updates', href: 'https://instagram.com/clinzed_ltd' }
     ],
     support: [
-      'Contact Us',
-      'Service Areas',
-      'Emergency Services',
-      'FAQ'
+      { name: 'Contact Us', href: '/#contact' },
+      { name: 'Service Areas', href: '#', onClick: 'openMap' },
+      { name: 'FAQ', href: '/#faq' }
     ]
   };
 
@@ -29,6 +26,14 @@ const Footer = () => {
     { icon: Facebook, href: 'https://www.facebook.com/share/18oHxHnmgU' },
     { icon: Instagram, href: 'https://instagram.com/clinzed_ltd' }
   ];
+
+  const handleServiceAreaClick = () => {
+    // For now, we'll just scroll to contact. The map popup can be implemented later
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-clinzed-darkGreen text-white">
@@ -73,8 +78,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200">
-                    {link}
+                  <a href={link.href} className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200">
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -87,9 +92,23 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200">
-                    {link}
-                  </a>
+                  {link.href.startsWith('http') ? (
+                    <a 
+                      href={link.href} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link 
+                      to={link.href} 
+                      className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -101,12 +120,21 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link === 'FAQ' ? '#faq' : '#'} 
-                    className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200"
-                  >
-                    {link}
-                  </a>
+                  {link.onClick === 'openMap' ? (
+                    <button 
+                      onClick={handleServiceAreaClick}
+                      className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200 text-left"
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <a 
+                      href={link.href} 
+                      className="text-gray-300 hover:text-clinzed-lightGreen transition-colors duration-200"
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
