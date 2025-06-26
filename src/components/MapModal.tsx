@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { X } from 'lucide-react';
@@ -12,13 +12,12 @@ interface MapModalProps {
 const MapModal = ({ isOpen, onClose }: MapModalProps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
 
   useEffect(() => {
-    if (!isOpen || !mapContainer.current || !mapboxToken) return;
+    if (!isOpen || !mapContainer.current) return;
 
-    // Initialize map
-    mapboxgl.accessToken = mapboxToken;
+    // Initialize map with your Mapbox token
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaXRjaHltaW5pb25tZXNzZW5nZXIiLCJhIjoiY21jY3FlNDU5MDJvNDJxcXowNWthYW1yeSJ9.elsk_KW_fO_RMm5C4Acmig';
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
@@ -40,7 +39,7 @@ const MapModal = ({ isOpen, onClose }: MapModalProps) => {
     return () => {
       map.current?.remove();
     };
-  }, [isOpen, mapboxToken]);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -57,23 +56,7 @@ const MapModal = ({ isOpen, onClose }: MapModalProps) => {
           </button>
         </div>
         
-        {!mapboxToken ? (
-          <div className="p-6 text-center">
-            <h3 className="text-lg font-medium mb-4">Enter your Mapbox Token</h3>
-            <input
-              type="text"
-              placeholder="Paste your Mapbox public token here"
-              className="w-full max-w-md p-3 border rounded-lg mb-4"
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-            />
-            <p className="text-sm text-gray-600">
-              Get your token from <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-clinzed-green underline">mapbox.com</a>
-            </p>
-          </div>
-        ) : (
-          <div ref={mapContainer} className="flex-1 rounded-b-lg" style={{ height: 'calc(100% - 60px)' }} />
-        )}
+        <div ref={mapContainer} className="flex-1 rounded-b-lg" style={{ height: 'calc(100% - 60px)' }} />
       </div>
     </div>
   );
