@@ -58,15 +58,6 @@ const GallerySection = () => {
             </Card>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-400 mb-6">
-            Join our mission to create cleaner, healthier communities through sustainable waste management.
-          </p>
-          <button className="bg-clinzed-green text-black px-8 py-3 rounded-lg font-semibold hover:bg-clinzed-lightGreen transition-colors duration-300">
-            Get Involved
-          </button>
-        </div>
       </div>
     </section>
   );
