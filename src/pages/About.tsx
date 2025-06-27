@@ -75,8 +75,8 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
-                alt="Waste management team at work"
+                src="/lovable-uploads/85d67ebe-a5ae-4a15-b824-d32826931e0e.png"
+                alt="CLINZED team members working together on waste collection"
                 className="rounded-2xl shadow-xl"
               />
             </div>
