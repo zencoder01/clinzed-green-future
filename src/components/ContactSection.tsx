@@ -63,6 +63,39 @@ const ContactSection = () => {
               ))}
             </div>
 
+            {/* Google Maps Location */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                Find Us
+              </h3>
+              <div className="bg-gray-800/50 p-6 rounded-xl">
+                <div className="aspect-video w-full rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.5397886421654!2d28.2833!3d-15.4167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940f36b6b6b6b6b%3A0x2f2b2b2b2b2b2b2b!2sLusaka%2C%20Zambia!5e0!3m2!1sen!2sus!4v1234567890123"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <p className="text-gray-300 mb-2">Visit us at our location in Lusaka</p>
+                  <a 
+                    href="https://g.page/r/Ca2j2OmKPKsvEBI/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-clinzed-green hover:text-clinzed-lightGreen transition-colors"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    <span>View on Google Maps & Leave a Review</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="mt-12 text-center">
               <img 
                 src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
