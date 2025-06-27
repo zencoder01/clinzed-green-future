@@ -62,8 +62,8 @@ const AboutSection = () => {
           {/* Right Column - Image */}
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
-              alt="Pine trees representing environmental conservation"
+              src="/lovable-uploads/74be9ffc-3e87-45c6-bcaa-fc8c00240931.png"
+              alt="Local community participating in waste management"
               className="w-full h-96 object-cover rounded-2xl shadow-2xl"
             />
             <div className="absolute inset-0 bg-clinzed-green/10 rounded-2xl"></div>

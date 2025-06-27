@@ -98,8 +98,8 @@ const ContactSection = () => {
 
             <div className="mt-12 text-center">
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
-                alt="Clean environment with water and trees"
+                src="/lovable-uploads/9defccd2-94bc-474e-ae95-c2c3e2673631.png"
+                alt="Community collaboration in waste management"
                 className="w-full max-w-2xl mx-auto h-64 object-cover rounded-2xl shadow-lg"
               />
             </div>
